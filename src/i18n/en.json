@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact",
+    "branches": "Branches"
+  },
+  "branches": {
+    "smoked": "Smoked Meat",
+    "shawarma": "Shawarma",
+    "mandi": "Mandi"
+  }
+}
