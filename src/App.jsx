@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Smoked from "./pages/Smoked";      // ✅ Correct now
 import Shawarma from "./pages/Shawarma";  // ✅ Also correct
 import Mandi from "./pages/Mandi";
+import Footer from "./components/Footer"; // Add this line
 
 
 
@@ -39,6 +40,8 @@ export default function App() {
               <Route path="/branches/mandi" element={<Mandi />} />
 
             </Routes>
+
+            <Footer />
           </main>
         </div>
       </div>
