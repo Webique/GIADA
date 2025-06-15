@@ -43,6 +43,13 @@ export default function Smoked() {
           </a>
         </div>
 
+        {/* ✅ Image Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <img src="/images/smoked1.jpg" alt="Smoked meat 1" className="w-full h-64 object-cover rounded-lg shadow" />
+          <img src="/images/smoked2.jpg" alt="Smoked meat 2" className="w-full h-64 object-cover rounded-lg shadow" />
+          <img src="/images/smoked3.jpg" alt="Smoked meat 3" className="w-full h-64 object-cover rounded-lg shadow" />
+        </div>
+
         {/* Embedded Map */}
         <div className="rounded overflow-hidden border border-gray-300">
           <iframe

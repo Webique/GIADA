@@ -43,6 +43,13 @@ export default function Mandi() {
           </a>
         </div>
 
+        {/* ✅ Mandi Image Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <img src="/images/mandi1.jpg" alt="Mandi Dish 1" className="w-full h-64 object-cover rounded-lg shadow" />
+          <img src="/images/mandi2.jpg" alt="Mandi Dish 2" className="w-full h-64 object-cover rounded-lg shadow" />
+          <img src="/images/mandi3.jpg" alt="Mandi Dish 3" className="w-full h-64 object-cover rounded-lg shadow" />
+        </div>
+
         {/* Embedded Map */}
         <div className="rounded overflow-hidden border border-gray-300">
           <iframe
