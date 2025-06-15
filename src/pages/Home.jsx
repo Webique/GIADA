@@ -34,7 +34,7 @@ export default function Home() {
       path: "/branches/mandi",
       contact: "+966 55 040 5012",
       hours: i18n.language === "ar" ? "١٢:٠٠ مساءً – ١٠:٠٠ مساءً" : "12:00 PM – 10:00 PM",
-      image: "/images/mandi.jpg",
+      image: "/images/mandi1.jpg",
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.000000000001!2d46.80000001500608!3d24.78000008411454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQ3JzQ4LjAiTiA0NsKwNDgnMDAuMCJF!5e0!3m2!1sen!2ssa!4v1718020000002!5m2!1sen!2ssa",
     },
   ];
@@ -48,21 +48,23 @@ export default function Home() {
 
         <div className="grid gap-8 md:grid-cols-3">
           {branches.map((branch, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className={`bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 ${
-                isRTL ? "text-right" : "text-left"
-              }`}
-            >
-              <Link to={branch.path}>
-                <img
-                  src={branch.image}
-                  alt={t(`branches.${branch.key}`)}
-                  className="w-full h-56 object-contain p-2 bg-white"
-                />
-              </Link>
+<motion.div
+  key={index}
+  whileHover={{ scale: 1.03 }}
+  whileTap={{ scale: 0.98 }}
+  className={`bg-white shadow-lg overflow-hidden transition-all duration-300 text-center`}
+
+>
+  <Link to={branch.path}>
+    <div className="w-full h-64 overflow-hidden">
+      <img
+        src={branch.image}
+        alt={t(`branches.${branch.key}`)}
+        className="w-full h-full object-cover scale-105"
+      />
+    </div>
+  </Link>
+
 
               <div className="p-5 space-y-3">
                 <Link to={branch.path}>
