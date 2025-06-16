@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsRTL(i18n.language === "ar");
-    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
   }, [i18n.language]);
 
   const branches = [
@@ -76,6 +76,7 @@ export default function Home() {
                     {t(`branches.${branch.key}`)}
                   </h2>
                 </Link>
+
                 <p className="text-gray-700">
                   <strong>{isRTL ? "رقم التواصل" : "Contact"}:</strong> {branch.contact}
                 </p>
@@ -83,7 +84,17 @@ export default function Home() {
                   <strong>{isRTL ? "ساعات العمل" : "Hours"}:</strong> {branch.hours}
                 </p>
 
-                {/* Embedded Map */}
+                {/* 🌟 View Menu Button Above the Map */}
+                <a
+                  href={branch.menuUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-8 py-3 text-lg font-bold tracking-wide rounded-full bg-gradient-to-r from-black to-gray-800 text-white shadow-xl hover:shadow-2xl hover:brightness-110 transition-all duration-300"
+                >
+                  {isRTL ? "عرض المنيو" : "View Menu"}
+                </a>
+
+                {/* 🗺️ Embedded Map */}
                 <div className="mt-3">
                   <iframe
                     src={branch.mapEmbed}
@@ -96,16 +107,6 @@ export default function Home() {
                     title={`Map of ${branch.key}`}
                   ></iframe>
                 </div>
-
-                {/* Menu Button */}
-                <a
-                  href={branch.menuUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 bg-primary text-white px-6 py-2 rounded-lg shadow hover:bg-opacity-90 transition"
-                >
-                  {isRTL ? "عرض المنيو" : "View Menu"}
-                </a>
               </div>
             </motion.div>
           ))}
